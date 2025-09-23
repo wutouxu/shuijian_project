@@ -7,7 +7,7 @@ function LoginPage({ onLoginSuccess }) {
 
   const handleLogin = () => {
     fetch('/api/login?username=' + username + '&password=' + password, {
-      method: 'POST',
+      method: 'GET',
     })
     .then(res => res.text())
     .then(response => {
