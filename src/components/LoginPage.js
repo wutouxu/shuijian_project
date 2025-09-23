@@ -6,7 +6,7 @@ function LoginPage({ onLoginSuccess }) {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    fetch('/simple-project/api/login?username=' + username + '&password=' + password, {
+    fetch('/api/login?username=' + username + '&password=' + password, {
       method: 'POST',
     })
     .then(res => res.text())

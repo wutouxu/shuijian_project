@@ -5,7 +5,7 @@ function Dashboard() {
   const [data, setData] = useState('');
 
   useEffect(() => {
-    fetch('/simple-project/api/data')
+    fetch('/api/data')
       .then(res => res.text())
       .then(response => {
         setData(response);
