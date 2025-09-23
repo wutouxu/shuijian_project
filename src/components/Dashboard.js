@@ -12,6 +12,8 @@ function Dashboard() {
       });
   }, []);
 
+
+  
   return (
     <div>
       <h2>Data Dashboard</h2>
