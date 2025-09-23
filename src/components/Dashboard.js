@@ -12,7 +12,6 @@ function Dashboard() {
       });
   }, []);
 
-  //测试
   return (
     <div>
       <h2>Data Dashboard</h2>
