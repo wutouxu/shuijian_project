@@ -6,7 +6,7 @@ import React from "react";
  * 以便不同环境（本地/云端）灵活切换。
  */
 const WEBUI_URL =
-  process.env.REACT_APP_WEBUI_URL?.trim() || "http://localhost:3000";
+  process.env.REACT_APP_WEBUI_URL?.trim() || "http://shuijian.free.idcfengye.com";
 
 export default function AiWebUI() {
   return (
