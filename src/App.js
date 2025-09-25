@@ -1,22 +1,21 @@
-
-import React, { useState } from 'react';
-import LoginPage from './components/LoginPage';
-import Dashboard from './components/Dashboard';
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import AiWebUI from "./pages/AIWebUI";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLoginSuccess = () => {
-    setIsLoggedIn(true);
-  };
-
-
-  
-
   return (
-    <div>
-      {!isLoggedIn ? <LoginPage onLoginSuccess={handleLoginSuccess} /> : <Dashboard />}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/ai" element={<AiWebUI />} />
+
+        {/* 未匹配路径回到登录 */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
