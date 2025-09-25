@@ -25,7 +25,8 @@ export default function Dashboard() {
   const openAIInNewTab = () => {
     // 新开一个页面，路由到 /ai（避免直接跨域打开 http://localhost:3000 带来的 iframe 限制）
     const url = `${window.location.origin}/ai`;
-    window.open(url, "_target", "noopener,noreferrer");
+    // window.open(url, "_target", "noopener,noreferrer");
+    window.location.href = url;
   };
 
   return (
