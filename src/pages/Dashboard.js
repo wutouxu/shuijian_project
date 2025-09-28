@@ -51,7 +51,7 @@ export default function Dashboard() {
             cursor: "pointer",
           }}
         >
-          打开 AI 助手
+          打开 AI 助手+
         </button>
       </div>
     </div>
